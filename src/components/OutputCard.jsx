@@ -65,20 +65,18 @@ const OutputCard = ({ results }) => {
   ];
 
   return (
-    <div className="rounded-2xl p-5 border-2 border-purple-400 bg-[#3a3d60] shadow-lg">
-      <h2 className="text-lg font-semibold mb-4 text-purple-300">
-        📊 계산 결과
-      </h2>
+    <div className="rounded-2xl p-5 border-2 border-white shadow-[0_0_10px_#ffffff99] bg-[#404875] text-white font-[Jua] transition-all duration-300 hover:shadow-[0_0_20px_#ffffffcc]">
+      <h2 className="text-lg mb-4 text-purple-200">📊 계산 결과</h2>
 
       {labels.map((label, i) => (
         <div key={i} className="mb-4 flex flex-col">
-          <label className="mb-1 text-sm font-medium text-white">{label}</label>
+          <label className="mb-1 text-sm">{label}</label>
           <input
             type="number"
             readOnly
             ref={(el) => (inputRefs.current[i] = el)}
             defaultValue=""
-            className={`px-3 py-2 rounded-lg bg-[#2e3058] text-white border border-gray-600 font-mono text-base`}
+            className="px-3 py-2 rounded-lg bg-[#2e3058] text-white border border-gray-600 font-mono text-base"
           />
         </div>
       ))}
