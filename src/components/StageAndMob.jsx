@@ -1,7 +1,7 @@
 const StageAndMob = ({ setRewardInterval, setMobCount }) => {
   const handleStageChange = (e) => {
     const value = Number(e.target.value);
-    setRewardInterval(value); // 여기서 바로 부모 상태 바꿈
+    setRewardInterval(value);
   };
 
   const handleMobCountChange = (e) => {
@@ -10,14 +10,15 @@ const StageAndMob = ({ setRewardInterval, setMobCount }) => {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
-      
+    <div className="max-w-xs mx-auto p-4 bg-gradient-to-br from-pink-50 to-blue-100 rounded-xl shadow-md border border-purple-200 animate-fade-in transition-all duration-500 hover:shadow-xl hover:scale-105">
       <label className="block mb-4">
-        <span className="block mb-1 font-semibold">영지 선택:</span>
+        <span className="block mb-1 text-xs font-semibold text-purple-700">
+          🌿 영지 선택:
+        </span>
         <select
           onChange={handleStageChange}
-          className="w-full bg-white text-black border border-gray-300 rounded-md px-3 py-2 shadow-sm
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-white text-xs text-purple-800 border border-purple-300 rounded-lg px-2 py-1 shadow-sm
+                     focus:outline-none focus:ring-2 focus:ring-purple-400 hover:border-purple-500 transition-all duration-300 ease-in-out"
         >
           <option value="0">-- 선택 --</option>
           <option value="17">1 영지</option>
@@ -37,12 +38,14 @@ const StageAndMob = ({ setRewardInterval, setMobCount }) => {
         </select>
       </label>
 
-      <label className="block mb-4">
-        <span className="block mb-1 font-semibold">쫄작 수:</span>
+      <label className="block">
+        <span className="block mb-1 text-xs font-semibold text-purple-700">
+          👾 쫄작 수:
+        </span>
         <select
           onChange={handleMobCountChange}
-          className="w-full bg-white text-black border border-gray-300 rounded-md px-3 py-2 shadow-sm
-                     focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full bg-white text-xs text-purple-800 border border-purple-300 rounded-lg px-2 py-1 shadow-sm
+                     focus:outline-none focus:ring-2 focus:ring-purple-400 hover:border-purple-500 transition-all duration-300 ease-in-out"
         >
           <option value="0">-- 선택 --</option>
           <option value="20">1쫄작</option>

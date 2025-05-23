@@ -1,7 +1,8 @@
 // InputCardStyles.js
 
 const InputCardStyles = {
-  container: "rounded-2xl p-5 border-2 border-purple-400 bg-[#2a2c4e] shadow-lg",
+  container:
+    "rounded-2xl p-5 border-2 border-purple-400 bg-[#2a2c4e] shadow-lg",
   title: "text-lg font-semibold mb-4 text-purple-300",
   inputGroup: "mb-4 flex flex-col",
   label: "mb-1 text-sm font-medium text-white",
