@@ -1,3 +1,5 @@
+import "../styles/commonstyle.css";
+
 const StageAndMob = ({ setRewardInterval, setMobCount }) => {
   const handleStageChange = (e) => {
     const value = Number(e.target.value);
@@ -10,7 +12,7 @@ const StageAndMob = ({ setRewardInterval, setMobCount }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4 bg-[#4a5a8a] rounded-xl shadow-md shadow-black/30 text-white font-[Jua]">
+    <div className="max-w-2xl mx-auto p-4 bg-[#4a5a8a] rounded-xl shadow-md shadow-black/30 text-white font-[Jua] animate-fade-in hover:scale-105 transition-transform duration-300">
       <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
         {/* 영지 선택 */}
         <label className="flex items-center space-x-2 flex-1 w-full">

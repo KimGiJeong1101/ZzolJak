@@ -1,0 +1,66 @@
+/* tailwind.css 또는 globals.css 등 공통 스타일에 추가 */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseNeon {
+  0%,
+  100% {
+    box-shadow: 0 0 8px #fff, 0 0 12px #aaa;
+  }
+  50% {
+    box-shadow: 0 0 16px #fff, 0 0 24px #aaa;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(2deg);
+  }
+  75% {
+    transform: rotate(-2deg);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.7s ease-out forwards;
+}
+
+.animate-slide-up-delayed {
+  animation: slideUp 0.9s ease-out 0.3s forwards;
+}
+
+.animate-pulse-neon {
+  animation: pulseNeon 1.8s infinite ease-in-out;
+}
+
+.hover\:animate-wiggle:hover {
+  animation: wiggle 0.5s ease-in-out;
+}

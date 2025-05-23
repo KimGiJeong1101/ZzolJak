@@ -1,5 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 import Chart from "chart.js/auto";
+import "../styles/commonstyle.css";
 
 const InputCard = ({
   buy50,
@@ -91,7 +92,7 @@ const InputCard = ({
   }, [usedRuby, expectedReward]);
 
   return (
-    <div className="rounded-2xl p-5 border-2 border-white shadow-[0_0_10px_#ffffff99] bg-[#404875] text-white font-[Jua] transition-all duration-300 hover:shadow-[0_0_20px_#ffffffcc]">
+    <div className="rounded-2xl p-5 border-2 border-white shadow-lg bg-[#404875] text-white font-[Jua] transition-all duration-300 hover:shadow-[0_0_20px_#ffffffcc] animate-pulse-neon">
       <h2 className="text-lg mb-4 text-purple-200">📝 입력값</h2>
 
       <div className="mb-4 flex flex-col">

@@ -1,6 +1,8 @@
+import "../styles/commonstyle.css";
+
 const InfoBar = () => {
   return (
-    <div className="text-sm bg-[#4a5a8a] px-4 py-3 rounded-xl max-w-md mx-auto shadow-md shadow-black/30 font-[Jua] text-[#fefefe] text-center">
+    <div className="text-sm bg-[#4a5a8a] px-4 py-3 rounded-xl max-w-md mx-auto shadow-md shadow-black/30 font-[Jua] text-[#fefefe] text-center animate-fade-in animate-bounce-in">
       <div className="flex justify-center items-center gap-2 flex-wrap">
         🔑 열쇠상자 1개
         <span className="text-lg text-yellow-200">→</span>
