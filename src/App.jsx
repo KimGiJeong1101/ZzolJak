@@ -6,6 +6,7 @@ import Notice from "./components/Notice";
 import useRubyCalculator from "./hooks/useRubyCalculator";
 import StageAndMob from "./components/StageAndMob";
 
+import "@fontsource/baloo-2"; // npm install @fontsource/baloo-2
 import rubyImg from "./assets/ruby_img.png";
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen bg-[#394867] text-[#f0f0ff] px-4 py-6 font-[Gowun_Dodum,sans-serif]">
-      <h1 className="text-center text-2xl sm:text-3xl mb-4 font-bold text-[#fafcfe] drop-shadow-md flex items-center justify-center gap-2">
+      <h1 className="text-center text-2xl sm:text-3xl mb-4 font-bold text-[#fafcfe] drop-shadow-md flex items-center justify-center gap-2 font-nanum-rounded neon-text">
         <img src={rubyImg} alt="루비" className="w-8 h-8" />
         쫄작 루비 계산기
         <img src={rubyImg} alt="루비" className="w-8 h-8" />

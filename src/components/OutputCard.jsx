@@ -34,16 +34,16 @@ const animateValue = (inputEl, newValue) => {
 
 const updateProfitStyle = (input, value) => {
   input.classList.remove(
-    "text-white",
-    "text-green-400",
-    "text-red-400",
-    "text-orange-400",
-    "text-gray-300"
+    "text-neutral-800",
+    "text-green-600",
+    "text-red-600",
+    "text-yellow-600",
+    "text-gray-500"
   );
 
-  if (value > 0) input.classList.add("text-green-400", "font-bold");
-  else if (value < 0) input.classList.add("text-orange-400", "font-bold");
-  else input.classList.add("text-gray-300");
+  if (value > 0) input.classList.add("text-green-600", "font-semibold");
+  else if (value < 0) input.classList.add("text-red-600", "font-semibold");
+  else input.classList.add("text-gray-600");
 };
 
 const OutputCard = ({ results }) => {
@@ -54,20 +54,13 @@ const OutputCard = ({ results }) => {
 
     results.forEach((val, i) => {
       const el = inputRefs.current[i];
-      if (!el) {
-        console.log(`inputRefs.current[${i}] is null or undefined`);
-        return;
-      }
+      if (!el) return;
       animateValue(el, val);
     });
 
     const profitInput = inputRefs.current[6];
-    console.log("profitInput:", profitInput);
-    console.log("profitValue:", results[6]);
-
     if (profitInput) {
       updateProfitStyle(profitInput, results[6]);
-      console.log("Updated profit style classes:", profitInput.className);
     }
   }, [results]);
 
@@ -82,18 +75,18 @@ const OutputCard = ({ results }) => {
   ];
 
   return (
-    <div className="rounded-2xl p-5 border-2 border-white shadow-[0_0_10px_#ffffff99] bg-[#404875] text-white font-[Jua] transition-all duration-300 hover:shadow-[0_0_20px_#ffffffcc] animate-slide-up-delayed">
-      <h2 className="text-lg mb-4 text-purple-200">📊 계산 결과</h2>
+    <div className="rounded-2xl p-5 border-2 border-slate-200 shadow-md bg-[#93C5FD] text-neutral-800 font-[Jua] transition-all duration-300 hover:shadow-lg animate-slide-up-delayed">
+      <h2 className="text-lg mb-4 text-purple-700">📊 계산 결과</h2>
 
       {labels.map((label, i) => (
         <div key={i} className="mb-4 flex flex-col">
-          <label className="mb-1 text-sm">{label}</label>
+          <label className="mb-1 text-sm text-slate-800">{label}</label>
           <input
             type="number"
             readOnly
             ref={(el) => (inputRefs.current[i] = el)}
             defaultValue=""
-            className="px-3 py-2 rounded-lg bg-[#2e3058] text-white border border-gray-600 font-mono text-base animate-pulse"
+            className="px-3 py-2 rounded-lg bg-white text-neutral-800 border border-slate-400 font-mono text-base animate-pulse"
           />
         </div>
       ))}

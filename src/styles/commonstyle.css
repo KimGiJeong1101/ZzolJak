@@ -1,9 +1,7 @@
-/* tailwind.css 또는 globals.css 등 공통 스타일에 추가 */
-
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -14,7 +12,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -25,10 +23,10 @@
 @keyframes pulseNeon {
   0%,
   100% {
-    box-shadow: 0 0 8px #fff, 0 0 12px #aaa;
+    box-shadow: 0 0 4px #fff, 0 0 8px #aaa;
   }
   50% {
-    box-shadow: 0 0 16px #fff, 0 0 24px #aaa;
+    box-shadow: 0 0 12px #fff, 0 0 20px #aaa;
   }
 }
 
@@ -38,29 +36,30 @@
     transform: rotate(0deg);
   }
   25% {
-    transform: rotate(2deg);
+    transform: rotate(1.5deg);
   }
   75% {
-    transform: rotate(-2deg);
+    transform: rotate(-1.5deg);
   }
 }
 
+/* 클래스 정의 */
 .animate-fade-in {
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.6s ease-out both;
 }
 
 .animate-slide-up {
-  animation: slideUp 0.7s ease-out forwards;
+  animation: slideUp 0.6s ease-out both;
 }
 
 .animate-slide-up-delayed {
-  animation: slideUp 0.9s ease-out 0.3s forwards;
+  animation: slideUp 0.8s ease-out 0.3s both;
 }
 
 .animate-pulse-neon {
-  animation: pulseNeon 1.8s infinite ease-in-out;
+  animation: pulseNeon 2.2s infinite ease-in-out;
 }
 
 .hover\:animate-wiggle:hover {
-  animation: wiggle 0.5s ease-in-out;
+  animation: wiggle 0.4s ease-in-out;
 }

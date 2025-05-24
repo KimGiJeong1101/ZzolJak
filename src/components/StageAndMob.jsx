@@ -12,14 +12,16 @@ const StageAndMob = ({ setRewardInterval, setMobCount }) => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4 bg-[#4a5a8a] rounded-xl shadow-md shadow-black/30 text-white font-[Jua] animate-fade-in hover:scale-105 transition-transform duration-300">
+    <div className="max-w-2xl mx-auto p-4 bg-[#F3F4F6] rounded-xl shadow-md shadow-black/20 text-gray-800 font-[Jua] animate-fade-in hover:scale-105 transition-transform duration-300">
       <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
         {/* 영지 선택 */}
         <label className="flex items-center space-x-2 flex-1 w-full">
-          <span className="text-sm min-w-[85px] text-whtie">🌿 영지 선택</span>
+          <span className="text-sm min-w-[85px] text-gray-700">
+            🌿 영지 선택 :
+          </span>
           <select
             onChange={handleStageChange}
-            className="w-full bg-[#f8f9fb] text-black text-sm border border-purple-300 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 hover:border-purple-500 transition"
+            className="w-full bg-white text-black text-sm border border-cyan-600 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:border-cyan-400 transition"
           >
             <option value="0">영지 선택</option>
             <option value="17">1 영지</option>
@@ -41,10 +43,12 @@ const StageAndMob = ({ setRewardInterval, setMobCount }) => {
 
         {/* 쫄작 수 */}
         <label className="flex items-center space-x-2 flex-1 w-full">
-          <span className="text-sm min-w-[85px] text-whtie">👾 쫄작 개수</span>
+          <span className="text-sm min-w-[85px] text-gray-700">
+            👾 쫄작 개수 :
+          </span>
           <select
             onChange={handleMobCountChange}
-            className="w-full bg-[#f8f9fb] text-black text-sm border border-purple-300 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-400 hover:border-purple-500 transition"
+            className="w-full bg-white text-black text-sm border border-cyan-600 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-cyan-300 hover:border-cyan-400 transition"
           >
             <option value="0">쫄작 개수</option>
             <option value="20">1쫄작</option>
