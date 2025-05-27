@@ -195,17 +195,17 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
       <div className="flex justify-center gap-4 mb-2">
         <button
           onClick={() => handleSelectType("normal")}
-          className={`px-5 py-2.5 rounded-2xl text-white text-sm sm:text-base transition-all duration-200 shadow-md ${
+          className={`cursor-pointer px-5 py-2.5 rounded-2xl text-white text-sm sm:text-base transition-all duration-200 shadow-md ${
             activeType === "normal"
               ? "bg-blue-600"
               : "bg-blue-400 hover:bg-blue-600"
           }`}
         >
-          일반
+          보통
         </button>
         <button
           onClick={() => handleSelectType("nightmare")}
-          className={`px-5 py-2.5 rounded-2xl text-white text-sm sm:text-base transition-all duration-200 shadow-md ${
+          className={`cursor-pointer px-5 py-2.5 rounded-2xl text-white text-sm sm:text-base transition-all duration-200 shadow-md ${
             activeType === "nightmare"
               ? "bg-purple-600"
               : "bg-purple-400 hover:bg-purple-600"
