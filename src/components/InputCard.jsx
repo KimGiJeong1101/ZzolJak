@@ -9,8 +9,6 @@ const InputCard = ({
   mobCount,
   setBuy50,
   setBuy80,
-  setRewardInterval,
-  setMobCount,
   chartRef,
   usedRuby,
   expectedReward,

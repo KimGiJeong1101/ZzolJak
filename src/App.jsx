@@ -14,8 +14,8 @@ const App = () => {
 
   const [buy50, setBuy50] = useState("");
   const [buy80, setBuy80] = useState("");
-  const [rewardInterval, setRewardInterval] = useState("");
   const [mobCount, setMobCount] = useState("");
+  const [dungeonExp, setDungeonExp] = useState("");
 
   const {
     totalBox,
@@ -25,11 +25,12 @@ const App = () => {
     rubyRewardCount,
     totalRubyReward,
     rubyProfit,
+    rewardInterval,
   } = useRubyCalculator({
     buy50,
     buy80,
-    rewardInterval,
     mobCount,
+    dungeonExp,
   });
 
   return (
@@ -43,10 +44,8 @@ const App = () => {
       <div className="mb-6">
         <InfoBar />
       </div>
-      <StageAndMob
-        setRewardInterval={setRewardInterval}
-        setMobCount={setMobCount}
-      />
+
+      <StageAndMob setDungeonExp={setDungeonExp} setMobCount={setMobCount} />
 
       {/* 여기 max-w-6xl 유지하되, 그 안의 자식 컨테이너에 반응형 너비 적용 */}
       <div className="grid gap-6 max-w-6xl mx-auto mt-6 sm:grid-cols-2">
@@ -56,9 +55,8 @@ const App = () => {
           setBuy50={setBuy50}
           setBuy80={setBuy80}
           rewardInterval={rewardInterval}
-          setRewardInterval={setRewardInterval}
           mobCount={mobCount}
-          setMobCount={setMobCount}
+          dungeonExp={dungeonExp}
           chartRef={chartRef}
           usedRuby={totalUsedRuby}
           expectedReward={totalRubyReward}
@@ -75,6 +73,7 @@ const App = () => {
             rubyRewardCount,
             totalRubyReward,
             rubyProfit,
+            rewardInterval,
           ]}
           className="w-full max-w-md sm:max-w-none"
         />
