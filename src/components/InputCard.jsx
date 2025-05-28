@@ -153,12 +153,14 @@ const InputCard = ({
         />
       </div>
 
-      <canvas
-        ref={canvasRef}
-        className="mt-4 w-full"
-        width={300}
-        height={150}
-      />
+      <div className="w-full max-w-full">
+        <canvas
+          ref={canvasRef}
+          className="mt-4 w-full"
+          width={400}
+          height={200}
+        />
+      </div>
     </div>
   );
 };
