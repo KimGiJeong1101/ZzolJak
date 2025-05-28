@@ -75,7 +75,7 @@ const OutputCard = ({ results }) => {
   ];
 
   return (
-    <div className="rounded-2xl p-5 border-2 border-slate-200 shadow-md bg-[#93C5FD] text-neutral-800 font-[Jua] transition-all duration-300 hover:shadow-lg animate-slide-up-delayed">
+    <div className="rounded-2xl p-5 border-2 border-slate-200 shadow-md bg-[#93C5FD] text-neutral-800 font-[Jua] transition-all duration-300 hover:shadow-lg animate-slide-up-delayed w-full">
       <h2 className="text-lg mb-4 text-purple-700">📊 계산 결과</h2>
 
       {labels.map((label, i) => (
