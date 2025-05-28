@@ -64,6 +64,8 @@ const InputCard = ({
           ],
         },
         options: {
+          responsive: true,
+          maintainAspectRatio: false,
           indexAxis: "y",
           scales: {
             x: {
@@ -151,7 +153,7 @@ const InputCard = ({
         />
       </div>
 
-      <canvas ref={canvasRef} width="400" height="200" className="mt-4" />
+      <canvas ref={canvasRef} className="mt-4 w-full h-auto" />
     </div>
   );
 };
