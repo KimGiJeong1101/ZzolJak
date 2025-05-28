@@ -151,7 +151,7 @@ const InputCard = ({
         />
       </div>
 
-      {/* <canvas ref={canvasRef} width="400" height="200" className="mt-4" /> */}
+      <canvas ref={canvasRef} width="400" height="200" className="mt-4" />
     </div>
   );
 };
