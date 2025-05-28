@@ -90,7 +90,7 @@ const InputCard = ({
   }, [usedRuby, expectedReward]);
 
   return (
-    <div className="rounded-2xl p-5 border-2 border-[#1E3A8A] shadow-lg bg-[#93C5FD] text-[#1E3A8A] font-[Jua] transition-all duration-300 hover:shadow-[0_0_15px_#3B82F6aa] animate-pulse-neon w-full">
+    <div className="rounded-2xl p-5 border-2 border-[#1E3A8A] shadow-lg bg-[#93C5FD] text-[#1E3A8A] font-[Jua] transition-all duration-300 hover:shadow-[0_0_15px_#3B82F6aa] animate-pulse-neon">
       <h2 className="text-lg mb-4 font-semibold">📝 입력값</h2>
 
       <div className="mb-4 flex flex-col">
@@ -151,9 +151,7 @@ const InputCard = ({
         />
       </div>
 
-      <div className="w-full">
-        <canvas ref={canvasRef} className="mt-4 w-full h-auto" />
-      </div>
+      {/* <canvas ref={canvasRef} width="400" height="200" className="mt-4" /> */}
     </div>
   );
 };
