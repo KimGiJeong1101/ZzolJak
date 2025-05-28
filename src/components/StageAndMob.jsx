@@ -107,7 +107,7 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
   const NormalUI = () => (
     <div className="mt-6 space-y-4">
       <label className="flex items-center space-x-2">
-        <span className="text-sm min-w-[85px]"> 🌿 영지 선택 :</span>
+        <span className="text-sm min-w-[85px]"> 🌿영지 선택 :</span>
         <select
           value={normalStage}
           onChange={handleNormalStageChange}
@@ -123,7 +123,7 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
       </label>
 
       <label className="flex items-center space-x-2">
-        <span className="text-sm min-w-[85px]"> 👾 쫄작 개수 :</span>
+        <span className="text-sm min-w-[85px]"> 👾쫄작 개수 :</span>
         <select
           value={normalMobCount}
           onChange={handleNormalMobCountChange}
@@ -145,7 +145,7 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
 
     // <div className="mt-6 space-y-4">
     //   <label className="flex items-center space-x-2">
-    //     <span className="text-sm min-w-[85px]"> 🌿 영지 선택 :</span>
+    //     <span className="text-sm min-w-[85px]">🌿 영지 선택 :</span>
     //     <select
     //       value={nightmareStage}
     //       onChange={handleNightmareStageChange}
@@ -161,7 +161,7 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
     //   </label>
 
     //   <label className="flex items-center space-x-2">
-    //     <span className="text-sm min-w-[85px]"> 👾 쫄작 개수 :</span>
+    //     <span className="text-sm min-w-[85px]">👾 쫄작 개수 :</span>
     //     <select
     //       value={nightmareMobCount}
     //       onChange={handleNightmareMobCountChange}
