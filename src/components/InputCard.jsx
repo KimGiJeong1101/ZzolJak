@@ -157,7 +157,7 @@ const InputCard = ({
         <canvas
           ref={canvasRef}
           className="mt-4 w-full"
-          width={400}
+          width={300}
           height={200}
         />
       </div>
