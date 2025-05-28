@@ -65,7 +65,7 @@ const InputCard = ({
         },
         options: {
           responsive: true,
-          maintainAspectRatio: true,
+          maintainAspectRatio: false, // 반응형 제대로 작동하게 설정!
           indexAxis: "y",
           scales: {
             x: {
@@ -130,9 +130,7 @@ const InputCard = ({
       </div>
 
       <div className="mb-4 flex flex-col">
-        <label className="mb-1 text-sm font-medium">
-          🧭 만렙까지 도는 횟수
-        </label>
+        <label className="mb-1 text-sm font-medium">🧭 만렙까지 도는 횟수</label>
         <input
           type="number"
           readOnly
@@ -142,9 +140,7 @@ const InputCard = ({
       </div>
 
       <div className="mb-4 flex flex-col">
-        <label className="mb-1 text-sm font-medium">
-          🧟‍♂️ 쫄몹당 루비 획득량
-        </label>
+        <label className="mb-1 text-sm font-medium">🧟‍♂️ 쫄몹당 루비 획득량</label>
         <input
           type="number"
           readOnly
@@ -153,13 +149,9 @@ const InputCard = ({
         />
       </div>
 
-      <div className="w-full max-w-full">
-        <canvas
-          ref={canvasRef}
-          className="mt-4 w-full"
-          width={300}
-          height={200}
-        />
+      {/* 🔥 반응형 차트용 영역 */}
+      <div className="relative w-full h-40">
+        <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full" />
       </div>
     </div>
   );
