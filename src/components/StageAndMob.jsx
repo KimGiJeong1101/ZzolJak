@@ -48,20 +48,20 @@ const StageAndMob = ({ setDungeonExp, setMobCount, setLevel }) => {
   // 악몽 난이도
 
   const nightmareStages = [
-    { id: 1, label: "1 영지", exp: 10 },
-    { id: 2, label: "2 영지", exp: 10 },
-    { id: 3, label: "3 영지", exp: 10 },
-    { id: 4, label: "4 영지", exp: 10 },
-    { id: 5, label: "5 영지", exp: 10 },
-    { id: 6, label: "6 영지", exp: 10 },
-    { id: 7, label: "7 영지", exp: 10 },
-    { id: 8, label: "8 영지", exp: 10 },
-    { id: 9, label: "9 영지", exp: 10 },
-    { id: 10, label: "10 영지", exp: 400 },
-    { id: 11, label: "11 영지", exp: 400 },
-    { id: 12, label: "12 영지", exp: 400 },
-    { id: 13, label: "13 영지", exp: 400 },
-    { id: 14, label: "14 영지", exp: 400 },
+    { id: 1, label: "1 영지", exp: 1180 },
+    // { id: 2, label: "2 영지", exp: 10 },
+    // { id: 3, label: "3 영지", exp: 10 },
+    // { id: 4, label: "4 영지", exp: 10 },
+    // { id: 5, label: "5 영지", exp: 10 },
+    // { id: 6, label: "6 영지", exp: 10 },
+    // { id: 7, label: "7 영지", exp: 10 },
+    // { id: 8, label: "8 영지", exp: 10 },
+    // { id: 9, label: "9 영지", exp: 10 },
+    // { id: 10, label: "10 영지", exp: 400 },
+    // { id: 11, label: "11 영지", exp: 400 },
+    // { id: 12, label: "12 영지", exp: 400 },
+    // { id: 13, label: "13 영지", exp: 400 },
+    // { id: 14, label: "14 영지", exp: 400 },
   ];
 
   const nightmareMobs = [
@@ -144,50 +144,50 @@ const StageAndMob = ({ setDungeonExp, setMobCount, setLevel }) => {
   const NightmareUI = () => (
     // 해당 컴포넌트는 나중에 경험치 혹은 쫄작 수 정보를 수급하면 사용예정
 
-    // <div className="mt-6 space-y-4">
-    //   <label className="flex items-center space-x-2">
-    //     <span className="text-sm min-w-[85px]">🌿 영지 선택 :</span>
-    //     <select
-    //       value={nightmareStage}
-    //       onChange={handleNightmareStageChange}
-    //       className="w-full bg-white text-black text-sm border border-purple-500 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-300 hover:border-purple-400 transition"
-    //     >
-    //       <option value="0">영지 선택</option>
-    //       {nightmareStages.map(({ id, label }) => (
-    //         <option value={id} key={id}>
-    //           {label}
-    //         </option>
-    //       ))}
-    //     </select>
-    //   </label>
+    <div className="mt-6 space-y-4">
+      <label className="flex items-center space-x-2">
+        <span className="text-sm min-w-[85px]">🌿영지 선택 :</span>
+        <select
+          value={nightmareStage}
+          onChange={handleNightmareStageChange}
+          className="w-full bg-white text-black text-sm border border-purple-500 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-300 hover:border-purple-400 transition"
+        >
+          <option value="0">영지 선택</option>
+          {nightmareStages.map(({ id, label }) => (
+            <option value={id} key={id}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </label>
 
-    //   <label className="flex items-center space-x-2">
-    //     <span className="text-sm min-w-[85px]">👾 쫄작 개수 :</span>
-    //     <select
-    //       value={nightmareMobCount}
-    //       onChange={handleNightmareMobCountChange}
-    //       className="w-full bg-white text-black text-sm border border-purple-500 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-300 hover:border-purple-400 transition"
-    //     >
-    //       <option value="0">쫄작 수</option>
-    //       {nightmareMobs.map(({ label, value }) => (
-    //         <option value={value} key={value}>
-    //           {label}
-    //         </option>
-    //       ))}
-    //     </select>
-    //   </label>
-    // </div>
-
-    <div className="mt-4 p-4 border-2 border-purple-300 rounded-lg bg-purple-50 text-center shadow-inner shadow-purple-100">
-      <p className="text-base sm:text-lg font-semibold text-purple-600 mb-1.5">
-        ⚠️ 준비 중입니다!
-      </p>
-      <p className="text-xs sm:text-sm text-gray-700">
-        <span className="font-medium">악몽 난이도</span>는{" "}
-        <span className="font-bold text-purple-500">추후 업데이트 예정</span>
-        입니다.
-      </p>
+      <label className="flex items-center space-x-2">
+        <span className="text-sm min-w-[85px]">👾쫄작 개수 :</span>
+        <select
+          value={nightmareMobCount}
+          onChange={handleNightmareMobCountChange}
+          className="w-full bg-white text-black text-sm border border-purple-500 rounded-lg px-2 py-1 shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-300 hover:border-purple-400 transition"
+        >
+          <option value="0">쫄작 수</option>
+          {nightmareMobs.map(({ label, value }) => (
+            <option value={value} key={value}>
+              {label}
+            </option>
+          ))}
+        </select>
+      </label>
     </div>
+
+    // <div className="mt-4 p-4 border-2 border-purple-300 rounded-lg bg-purple-50 text-center shadow-inner shadow-purple-100">
+    //   <p className="text-base sm:text-lg font-semibold text-purple-600 mb-1.5">
+    //     ⚠️ 준비 중입니다!
+    //   </p>
+    //   <p className="text-xs sm:text-sm text-gray-700">
+    //     <span className="font-medium">악몽 난이도</span>는{" "}
+    //     <span className="font-bold text-purple-500">추후 업데이트 예정</span>
+    //     입니다.
+    //   </p>
+    // </div>
   );
 
   return (
