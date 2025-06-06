@@ -9,7 +9,7 @@ const InfoBar = () => {
         <strong className="text-black-100">60개 열쇠</strong>
       </div>
       <div className="flex justify-center items-center gap-2 flex-wrap mt-1">
-        ⚔️ 던전 1회당 열쇠 소모
+        ⚔️ 던전 1회당 <strong>열쇠 소모</strong>
       </div>
       <div className="text-sm text-[#334155]">
         보통: <strong className="text-black">6개</strong> / 악몽:{" "}
