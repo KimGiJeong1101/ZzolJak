@@ -16,6 +16,7 @@ const App = () => {
   const [buy80, setBuy80] = useState("");
   const [mobCount, setMobCount] = useState("");
   const [dungeonExp, setDungeonExp] = useState("");
+  const [level, setLevel] = useState("");
 
   const {
     totalBox,
@@ -31,6 +32,7 @@ const App = () => {
     buy80,
     mobCount,
     dungeonExp,
+    level,
   });
 
   return (
@@ -45,7 +47,12 @@ const App = () => {
         <InfoBar />
       </div>
 
-      <StageAndMob setDungeonExp={setDungeonExp} setMobCount={setMobCount} />
+      <StageAndMob
+        setDungeonExp={setDungeonExp}
+        setMobCount={setMobCount}
+        setLevel={setLevel}
+        level={level}
+      />
 
       {/* 여기 max-w-6xl 유지하되, 그 안의 자식 컨테이너에 반응형 너비 적용 */}
       <div className="grid gap-6 max-w-6xl mx-auto mt-6 sm:grid-cols-2">

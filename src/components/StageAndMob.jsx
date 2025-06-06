@@ -2,15 +2,15 @@ import { useState } from "react";
 import "../styles/commonstyle.css";
 import { motion, AnimatePresence } from "framer-motion";
 
-const StageAndMob = ({ setDungeonExp, setMobCount }) => {
+const StageAndMob = ({ setDungeonExp, setMobCount, setLevel }) => {
   const [activeType, setActiveType] = useState(null);
 
   const handleSelectType = (type) => {
     setActiveType(type);
-    setSelectedStage(""); // 초기화
-    setSelectedMobCount(""); // 초기화
     setDungeonExp(0); // 부모 상태도 초기화하고 싶다면
     setMobCount(0); // 여기도 초기화
+    setLevel(type);
+    console.log(type); // 바로 찍으면 최신값
   };
 
   const [normalStage, setNormalStage] = useState("");
@@ -35,6 +35,7 @@ const StageAndMob = ({ setDungeonExp, setMobCount }) => {
     { id: 12, label: "12 영지", exp: 1090 },
     { id: 13, label: "13 영지", exp: 1120 },
     { id: 14, label: "14 영지", exp: 1150 },
+    { id: 15, label: "15 영지", exp: 1180 },
   ];
 
   const normalMobs = [
