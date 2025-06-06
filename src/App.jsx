@@ -51,7 +51,6 @@ const App = () => {
         setDungeonExp={setDungeonExp}
         setMobCount={setMobCount}
         setLevel={setLevel}
-        level={level}
       />
 
       {/* 여기 max-w-6xl 유지하되, 그 안의 자식 컨테이너에 반응형 너비 적용 */}
