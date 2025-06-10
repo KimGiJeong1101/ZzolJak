@@ -14,6 +14,7 @@ const App = () => {
 
   const [buy50, setBuy50] = useState("");
   const [buy80, setBuy80] = useState("");
+  const [buy100, setBuy100] = useState("");
   const [mobCount, setMobCount] = useState("");
   const [dungeonExp, setDungeonExp] = useState("");
   const [level, setLevel] = useState("");
@@ -30,6 +31,7 @@ const App = () => {
   } = useRubyCalculator({
     buy50,
     buy80,
+    buy100,
     mobCount,
     dungeonExp,
     level,
@@ -58,8 +60,10 @@ const App = () => {
         <InputCard
           buy50={buy50}
           buy80={buy80}
+          buy100={buy100}
           setBuy50={setBuy50}
           setBuy80={setBuy80}
+          setBuy100={setBuy100}
           rewardInterval={rewardInterval}
           mobCount={mobCount}
           dungeonExp={dungeonExp}

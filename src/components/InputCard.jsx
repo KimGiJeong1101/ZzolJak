@@ -5,10 +5,12 @@ import "../styles/commonstyle.css";
 const InputCard = ({
   buy50,
   buy80,
+  buy100,
   rewardInterval,
   mobCount,
   setBuy50,
   setBuy80,
+  setBuy100,
   chartRef,
   usedRuby,
   expectedReward,
@@ -17,6 +19,7 @@ const InputCard = ({
 
   const [error50, setError50] = useState("");
   const [error80, setError80] = useState("");
+  const [error100, setError100] = useState("");
 
   const handleBuy50Change = (e) => {
     let val = e.target.value;
@@ -40,6 +43,18 @@ const InputCard = ({
     const num = Math.min(Number(val), 50);
     setBuy80(num);
     setError80(num < Number(val) ? "⚠️ 최대 50으로 자동 조정되었습니다." : "");
+  };
+
+  const handleBuy100Change = (e) => {
+    let val = e.target.value;
+    if (val === "") {
+      setBuy100("");
+      setError100("");
+      return;
+    }
+    const num = Math.min(Number(val), 50);
+    setBuy100(num);
+    setError100(num < Number(val) ? "⚠️ 최대 50으로 자동 조정되었습니다." : "");
   };
 
   useLayoutEffect(() => {
@@ -126,6 +141,25 @@ const InputCard = ({
         />
         {error80 && (
           <p className="text-[#DC2626] text-sm mt-1 font-semibold">{error80}</p>
+        )}
+      </div>
+
+      <div className="mb-4 flex flex-col">
+        <label className="mb-1 text-sm font-medium">
+          💰 100루비 상자 구매 횟수 (최대 50회)
+        </label>
+        <input
+          type="number"
+          value={buy100}
+          onChange={handleBuy100Change}
+          className="px-3 py-2 rounded-lg bg-[#E0F2FE] text-[#1E40AF] border border-[#3B82F6] focus:outline-none focus:ring-2 focus:ring-[#2563EB] transition"
+          min={0}
+          max={50}
+        />
+        {error100 && (
+          <p className="text-[#DC2626] text-sm mt-1 font-semibold">
+            {error100}
+          </p>
         )}
       </div>
 
